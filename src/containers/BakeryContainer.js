@@ -3,6 +3,7 @@ import Cake from '../components/Cake';
 import victoriaSpongeImage from '../images/victoria_sponge.jpeg';
 import teaLoafImage from '../images/tea_loaf.jpeg';
 import carrotCakeImage from '../images/carrot_cake.jpeg';
+import CakeForm from '../components/CakeForm';
 
 
 const BakeryContainer = () => {
@@ -72,10 +73,14 @@ const BakeryContainer = () => {
     setFilteredCakes([]);
   }
 
+  const addCake = (newCake) => {
+    setFilteredCakes([...cakes, newCake])
+  }
+
 
   return (
     <div>
-      <h1>Welcome to the Best Bakes Bakery!</h1>
+      <h1>Welcome to Whisked Wonders by Suzi! 👩🏼‍🍳</h1>
       <h2>Average Rating: {calculateAverageRating()} ⭐️</h2>
         <div className='searchFunction'>
           <input
@@ -94,8 +99,14 @@ const BakeryContainer = () => {
           <Cake key={cake.cakeName} cakeDetails={cake} sellCake={() => sellCake(cake.price)} />
         ))}
       </h3>
+      <div className='cakeForm'>
+        <h3>
+          Add a Cake Here!
+        </h3>
+        <CakeForm addCake={addCake}/>
+      </div>
         <footer>
-          <p>&copy; 2023 Best Bakes Bakery</p>
+          <p>&copy; 2023 WhiskedWondersBySuzi</p>
         </footer>
     </div>
   );

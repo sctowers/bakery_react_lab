@@ -12,6 +12,7 @@ h1, h2, h3 {
     padding: 1em;
     border-radius: 25px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition-duration: 2s;
 }
 
 h1 {
@@ -87,4 +88,30 @@ footer {
 
 .searchFunction button:hover {
     background-color: darkred;
+}
+
+.cakeForm {
+    text-align: center;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 4px;
+    width: 50%;
+    padding: 1em;
+    background-color: lavenderblush;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+}
+
+.cakeForm button:hover {
+    background-color: darkred;
+}
+
+.cakeForm h3 {
+    background-color: crimson;
+    color: lavenderblush;
+    margin-bottom: 5%;
+}
+
+.cakeNameInput {
+    width: 60%;
 }
